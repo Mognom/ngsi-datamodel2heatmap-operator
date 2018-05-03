@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="CoNWeT" name="ngsi-datamodel2heatmap" version="0.1.0">
+
+    <details>
+        <title>NGSI datamodel to heatmap</title>
+        <homepage>https://github.com/mognom/ngsi-datamodel2heatmap-operator</homepage>
+        <authors>Alejandro Rodríguez &lt;alex.rodriguez@conwet.com&gt;</authors>
+        <email>alex.rodriguez@conwet.com</email>
+        <image></image>
+        <smartphoneimage></smartphoneimage>
+        <description>Create a heatmap layer from a NGSI datamodel</description>
+        <longdescription>DESCRIPTION.md</longdescription>
+        <changelog>doc/changelog.md</changelog>
+        <doc>doc/userguide.md</doc>
+        <license>MIT</license>
+        <issuetracker>https://github.com/mognom/ngsi-datamodel2heatmap-operator/issues</issuetracker>
+    </details>
+
+    <preferences>
+    </preferences>
+
+    <wiring>
+        <inputendpoint name="input" type="text" label="Input data" description="List of NGSI entities" friendcode=""/>
+        <outputendpoint name="ol3heatmapLayer" type="text" label="Openlayers Heatmap layer" description="OL3 heatmap layer generated from the input NGSI entities" friendcode="wms-layer-command"/>
+        <outputendpoint name="leafletheatmapLayer" type="text" label="Leaflet Heatmap layer" description="Leaflet heatmap layer generated from the input NGSI entities" friendcode="leaflet-heatmap"/>
+    </wiring>
+
+    <scripts>
+        <script src="js/main.js"/>
+    </scripts>
+
+</operator>
